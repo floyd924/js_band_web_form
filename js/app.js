@@ -21,6 +21,7 @@ const handleFirstInput = function () {
 };
 
 const handleFormSubmit = function(event) {
+  event.preventDefault();
   //  what happens when the form button is submitted?
 
   event.preventDefault();
@@ -83,7 +84,7 @@ const handleFormSubmit = function(event) {
   const list_of_bands = document.querySelector('ul');
   list_of_bands.appendChild(newBand);
 
-
+  document.getElementById('input-form').reset();
 
 };
 
