@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weekend Homework</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patrick+Hand" rel="stylesheet">
+  </head>
+
+  <body>
+    <title></title>
+    <div class="intro-paragraph">
+      <p>
+
+      Welcome to the band database! This is a simple web application that allows the user to input various bands and relevant information, along with a photo.
+      I've tried to experiment with google fonts, different input types with responses, some radio buttons, a dropdown, and a link to a photo. Latest addition is a checklist, from which I can now print the results in interpolation.
+      <br><br>
+      I'd say my crowning jewl in this project has been the functionality to take an image url as a string input and return the image, complete with a border :)
+
+      <br></br>
+      Lastly, for once I feel like my CSS looks good and is doing what I want it to do!
+
+      </p>
+    </div>
+
+
+    <div class="form-wrapper">
+      <form id="input-form">
+
+
+        <div class="form-item">
+          <label for="name">Band name:</label>
+          <input id="name" type="text" />
+          <p id="name-result">Please enter a value</p>
+          <!-- update this text when something is typed -->
+        </div>
+
+
+
+
+        <div class="form-item">
+          <label for="genre">Genre:</label>
+          <select id="genre">
+            <option value="please select" disabled selection></option>
+            <option value="Rock">Rock</option>
+            <option value="Punk">Punk</option>
+            <option value="Metal">Metal</option>
+            <option value="Indie">Indie</option>
+            <option value="Other">Other</option>
+            <!-- if other, trigger box to specify! -->
+          </select>
+        </div>
+
+        <div class="form-item">
+          <!--  specify certian characters? -->
+          <label for="contact">Contact Number:</label>
+          <input id="contact" type="text" />
+        </div>
+
+        <div class="form-item">
+          <!-- link to photo -->
+          <label for="photo">Link to photo:</label>
+          <input id="photo" type="text" />
+        </div>
+
+        <div class="form-item">
+          <fieldset>
+            <legend>How many stars would you rate this band?</legend>
+              <input type="radio" id="rating" name="rating" value="1 *"/>
+              <label for="one">1</label>
+              <input type="radio" id="rating" name="rating" value="2 *"/>
+              <label for="two">2</label>
+              <input type="radio" id="rating" name="rating" value="3 *"/>
+              <label for="three">3</label>
+              <input type="radio" id="rating" name="rating" value="4 *"/>
+              <label for="four">4</label>
+              <input type="radio" id="rating" name="rating" value="5 *"/>
+              <label for="five">5</label>
+          </fieldset>
+        </div>
+
+        <div class="form-item">
+          <fieldset>
+            <legend>What instruments do they have?</legend>
+              <input type="checkbox" class="instrument" name="drums" value="drums"/>
+              <label for="drums">Drums</label>
+              <input type="checkbox" class="instrument" name="guitar" value="guitar"/>
+              <label for="guitar">Guitar</label>
+              <input type="checkbox" class="instrument" name="bass" value="bass"/>
+              <label for="bass">Bass</label>
+              <input type="checkbox" class="instrument" name="vocals" value="vocals"/>
+              <label for="vocals">Vocals</label>
+              <input type="checkbox" class="instrument" name="keys" value="keys"/>
+              <label for="keys">Keys</label>
+          </fieldset>
+        </div>
+
+
+        <input class="button-press" type="submit" value="save this band"/>
+      </form>
+
+      <form id="delete-button">
+        <input class ="button-press" type="submit" value="delete all">
+      </form>
+
+    </div>
+
+    <div class="list">
+      <ul id="entries">
+      </ul>
+    </div>
+
+
+
+  </body>
+
+  <footer>
+  </footer>
+</html>
